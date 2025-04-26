@@ -11,6 +11,8 @@ namespace Game.SceneManagement
         LoadingScene,
         TestGameScene1,
         TestGameScene2,
+        
+        GameScene,
     }
 
     /// <summary>

@@ -1,2 +1,2 @@
 # KUSO-Game-Jam
-48hours 開發遊戲
+48小時開發遊戲 :D

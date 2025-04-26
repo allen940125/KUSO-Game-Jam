@@ -8,7 +8,7 @@ namespace Game.UI
         [SerializeField] GameObject BackGroundObject;
 
         [SerializeField] Color BackGroundColor;
-        [SerializeField] float speed = 4f;
+        [SerializeField] float changespeed = 4f;
 
         [SerializeField] float maxAlpha = 1f;
 
@@ -47,7 +47,7 @@ namespace Game.UI
                 if(BackGroundColor.a <= maxAlpha)
                 {
                     
-                    BackGroundColor.a += speed * Time.deltaTime;
+                    BackGroundColor.a += changespeed * Time.deltaTime;
                     BackGroundObject.GetComponent<Image>().color = BackGroundColor;   
                     Debug.Log(BackGroundColor.a);
                 }
@@ -62,7 +62,7 @@ namespace Game.UI
             {
                 if(BackGroundColor.a >= 0)
                 {
-                    BackGroundColor.a -= speed * Time.deltaTime;
+                    BackGroundColor.a -= changespeed * Time.deltaTime;
                     BackGroundObject.GetComponent<Image>().color = BackGroundColor;   
                 }
                 else
@@ -73,14 +73,16 @@ namespace Game.UI
                 }
             }
         }
-        public void EnterStory(float alpha)
+        public void EnterStory(float alpha, float speed)
         {
             maxAlpha = alpha;
+            changespeed = speed;
             IsEntering = true;
         }
 
-        public void ExitStory()
+        public void ExitStory(float speed)
         {
+            changespeed = speed;
             IsExiting = true;
         }
     }

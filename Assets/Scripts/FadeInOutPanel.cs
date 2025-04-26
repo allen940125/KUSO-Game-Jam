@@ -1,19 +1,20 @@
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Game.UI
 {
-    public class FateInOutPanel : BasePanel
+    public class FadeInOutPanel : BasePanel
     {
-        [SerializeField] GameObject BackGroundObject;
+        [SerializeField] GameObject backGroundImage;
 
-        [SerializeField] Color BackGroundColor;
+        [SerializeField] Color backGroundColor;
         [SerializeField] float changespeed = 4f;
 
         [SerializeField] float maxAlpha = 1f;
 
-        [SerializeField] bool IsEntering = false;
-        [SerializeField] bool IsExiting = false;
+        [SerializeField] bool isEntering = false;
+        [SerializeField] bool isExiting = false;
 
         protected override void Awake()
         {
@@ -22,9 +23,9 @@ namespace Game.UI
 
         protected override void Start()
         {
-            BackGroundColor = BackGroundObject.GetComponent<Image>().color;
-            BackGroundColor.a = 1f;
-            BackGroundObject.GetComponent<Image>().color = BackGroundColor;
+            backGroundColor = backGroundImage.GetComponent<Image>().color;
+            backGroundColor.a = 1f;
+            backGroundImage.GetComponent<Image>().color = backGroundColor;
             base.Start();
         }  
 
@@ -42,34 +43,34 @@ namespace Game.UI
     
         private void Update()
         {
-            if(IsEntering)
+            if(isEntering)
             {
-                if(BackGroundColor.a <= maxAlpha)
+                if(backGroundColor.a <= maxAlpha)
                 {
                     
-                    BackGroundColor.a += changespeed * Time.deltaTime;
-                    BackGroundObject.GetComponent<Image>().color = BackGroundColor;   
-                    Debug.Log(BackGroundColor.a);
+                    backGroundColor.a += changespeed * Time.deltaTime;
+                    backGroundImage.GetComponent<Image>().color = backGroundColor;   
+                    Debug.Log(backGroundColor.a);
                 }
                 else
                 {
-                    BackGroundColor.a = maxAlpha;
-                    BackGroundObject.GetComponent<Image>().color = BackGroundColor; 
-                    IsEntering = false;
+                    backGroundColor.a = maxAlpha;
+                    backGroundImage.GetComponent<Image>().color = backGroundColor; 
+                    isEntering = false;
                 }
             }
-            else if(IsExiting)
+            else if(isExiting)
             {
-                if(BackGroundColor.a >= 0)
+                if(backGroundColor.a >= 0)
                 {
-                    BackGroundColor.a -= changespeed * Time.deltaTime;
-                    BackGroundObject.GetComponent<Image>().color = BackGroundColor;   
+                    backGroundColor.a -= changespeed * Time.deltaTime;
+                    backGroundImage.GetComponent<Image>().color = backGroundColor;   
                 }
                 else
                 {
-                    BackGroundColor.a = 0;
-                    BackGroundObject.GetComponent<Image>().color = BackGroundColor; 
-                    IsExiting = false;
+                    backGroundColor.a = 0;
+                    backGroundImage.GetComponent<Image>().color = backGroundColor; 
+                    isExiting = false;
                 }
             }
         }
@@ -77,13 +78,13 @@ namespace Game.UI
         {
             maxAlpha = alpha;
             changespeed = speed;
-            IsEntering = true;
+            isEntering = true;
         }
 
         public void ExitStory(float speed)
         {
             changespeed = speed;
-            IsExiting = true;
+            isExiting = true;
         }
     }
 }

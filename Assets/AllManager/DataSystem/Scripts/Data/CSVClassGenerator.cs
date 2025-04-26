@@ -24,7 +24,10 @@ namespace Datamanager
         public static async Task<T[]> GenClassArrayByCSV<T>(TextAsset textAsset) where T : new()
         {
             // 使用換行符號分割 CSV 檔案為多行
-            string[] data = textAsset.text.Split(new string[] { "\r\n" }, System.StringSplitOptions.None);
+            string[] data = textAsset.text.Split(new string[] { "\r\n", "\n" }, System.StringSplitOptions.None);
+            Debug.Log(data.Length);
+            Debug.Log(data[0]);
+            Debug.Log($"CSV內容：{string.Join(", ", data)}");
             
             // 將每行的內容再以逗號分割成字串陣列
             string[][] tempdata = new string[data.Length][];
@@ -57,7 +60,7 @@ namespace Datamanager
         {
             Debug.Log(type.Name);
             // 分割 CSV 文字內容為多行
-            string[] data = textAsset.text.Split(new string[] { "\r\n" }, System.StringSplitOptions.None);
+            string[] data = textAsset.text.Split(new string[] { "\r\n", "\n" }, System.StringSplitOptions.None);
             string[][] tempdata = new string[data.Length][];
             for (int i = 0; i < data.Length; i++)
             {
@@ -83,7 +86,7 @@ namespace Datamanager
         /// <returns>二維字串陣列，表示 CSV 中的所有資料。</returns>
         public static string[][] GenStringArrayFromCsvData(TextAsset textAsset)
         {
-            string[] data = textAsset.text.Split(new string[] { "\r\n" }, System.StringSplitOptions.None);
+            string[] data = textAsset.text.Split(new string[] { "\r\n", "\n" }, System.StringSplitOptions.None);
             string[][] tempdata = new string[data.Length][];
             for (int i = 0; i < data.Length; i++)
             {
@@ -100,7 +103,7 @@ namespace Datamanager
         /// <returns>字串列表陣列，每個 List&lt;string&gt; 代表 CSV 中的一行資料。</returns>
         public static List<string>[] GenStringListFromCsvData(TextAsset textAsset)
         {
-            string[] data = textAsset.text.Split(new string[] { "\r\n" }, System.StringSplitOptions.None);
+            string[] data = textAsset.text.Split(new string[] { "\r\n", "\n" }, System.StringSplitOptions.None);
             List<string>[] tempdata = new List<string>[data.Length];
             for (int i = 0; i < data.Length; i++)
             {

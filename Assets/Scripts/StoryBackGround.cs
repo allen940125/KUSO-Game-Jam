@@ -3,12 +3,12 @@ using UnityEngine;
 
 namespace Game.UI
 {
-    public class FadeInOutPanel : BasePanel
+    public class StoryBackGround : BasePanel
     {
         [SerializeField] GameObject BackGroundObject;
 
         [SerializeField] Color BackGroundColor;
-        [SerializeField] float speed = 4f;
+        [SerializeField] float changespeed = 4f;
 
         [SerializeField] float maxAlpha = 1f;
 
@@ -26,25 +26,35 @@ namespace Game.UI
             BackGroundColor.a = 1f;
             BackGroundObject.GetComponent<Image>().color = BackGroundColor;
             base.Start();
-        }
+        }  
 
         protected override void OnDestroy()
         {
             base.OnDestroy();
         }
 
+        // private void Start()
+        // {
+        //     BackGroundColor = BackGroundObject.GetComponent<Image>().color;
+        //     BackGroundColor.a = 1f;
+        //     BackGroundObject.GetComponent<Image>().color = BackGroundColor;
+        // }
+    
         private void Update()
         {
             if(IsEntering)
             {
                 if(BackGroundColor.a <= maxAlpha)
                 {
-                    BackGroundColor.a += speed * Time.deltaTime;
+                    
+                    BackGroundColor.a += changespeed * Time.deltaTime;
                     BackGroundObject.GetComponent<Image>().color = BackGroundColor;   
                     Debug.Log(BackGroundColor.a);
                 }
                 else
                 {
+                    BackGroundColor.a = maxAlpha;
+                    BackGroundObject.GetComponent<Image>().color = BackGroundColor; 
                     IsEntering = false;
                 }
             }
@@ -52,23 +62,27 @@ namespace Game.UI
             {
                 if(BackGroundColor.a >= 0)
                 {
-                    BackGroundColor.a -= speed * Time.deltaTime;
+                    BackGroundColor.a -= changespeed * Time.deltaTime;
                     BackGroundObject.GetComponent<Image>().color = BackGroundColor;   
                 }
                 else
                 {
+                    BackGroundColor.a = 0;
+                    BackGroundObject.GetComponent<Image>().color = BackGroundColor; 
                     IsExiting = false;
                 }
             }
         }
-        public void EnterStory(float alpha)
+        public void EnterStory(float alpha, float speed)
         {
             maxAlpha = alpha;
+            changespeed = speed;
             IsEntering = true;
         }
 
-        public void ExitStory()
+        public void ExitStory(float speed)
         {
+            changespeed = speed;
             IsExiting = true;
         }
     }

@@ -66,7 +66,7 @@ public class GameManager : Singleton<GameManager>
         
         if (UnityEngine.Input.GetKeyDown(KeyCode.G))
         {
-            UIManager.OpenPanel<FadeInOutPanel>(UIType.FadeInOutPanel);
+            //UIManager.OpenPanel<FadeInOutPanel>(UIType.FadeInOutPanel);
         }
     }
     public void SetPlayer(GameObject newPlayer)

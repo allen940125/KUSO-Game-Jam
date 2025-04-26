@@ -118,12 +118,12 @@ MonoBehaviour:
   isSetInputActive: 0
   audio_NormalBtn:
     audioClip: {fileID: 0}
-  BackGroundObject: {fileID: 0}
-  BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  backGroundImage: {fileID: 6795766421515727547}
+  backGroundColor: {r: 0, g: 0, b: 0, a: 0}
   changespeed: 4
   maxAlpha: 1
-  IsEntering: 0
-  IsExiting: 0
+  isEntering: 0
+  isExiting: 0
 --- !u!1 &6795766421515727547
 GameObject:
   m_ObjectHideFlags: 0

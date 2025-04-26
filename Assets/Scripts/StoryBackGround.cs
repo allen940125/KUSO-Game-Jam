@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.UI
 {
-    public class StoryBackGround : BasePanel
+    public class FadeInOutPanel : BasePanel
     {
         [SerializeField] GameObject BackGroundObject;
 
@@ -16,22 +16,22 @@ namespace Game.UI
         [SerializeField] bool IsExiting = false;
 
         protected override void Awake()
-            {
-                base.Awake();
-            }
+        {
+            base.Awake();
+        }
 
-            protected override void Start()
-            {
-                BackGroundColor = BackGroundObject.GetComponent<Image>().color;
-                BackGroundColor.a = 1f;
-                BackGroundObject.GetComponent<Image>().color = BackGroundColor;
-                base.Start();
-            }
+        protected override void Start()
+        {
+            BackGroundColor = BackGroundObject.GetComponent<Image>().color;
+            BackGroundColor.a = 1f;
+            BackGroundObject.GetComponent<Image>().color = BackGroundColor;
+            base.Start();
+        }
 
-            protected override void OnDestroy()
-            {
-                base.OnDestroy();
-            }
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+        }
 
         private void Update()
         {

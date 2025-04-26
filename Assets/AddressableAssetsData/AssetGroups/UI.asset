@@ -31,7 +31,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 27891efd8e5704688b49369c90af71e0
-    m_Address: UI/Prefab/Panels/FadeInOutPanels
+    m_Address: UI/Prefab/Panels/FadeInOutPanel
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -1,0 +1,4 @@
+﻿Id,Name,PrefabPath,IconPath,ItemDescription,ItemControllerType,ItemRarityType,ItemUseTimes,LifeTime,Value,BuffPrefabPath
+100,Money,Items/Money,Icons/Money,世界通用貨幣,Material,Common,0,0,1,Buffs/HealthBoost
+101,HealthPotion,Items/HealthPotion,Icons/HealthPotionIcon,紅藥水用於回復血量,Consumable,Common,1,10,50,Buffs/HealthBoost
+102,ManaPotion,Items/ManaPotion,Icons/ManaPotionIcon,藍藥水用於回復魔力,Consumable,Poor,1,10,30,Buffs/ManaBoost

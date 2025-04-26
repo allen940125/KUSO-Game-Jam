@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 801f006c873be6945b33b3ab2c1336bc, type: 3}
+  m_Name: InputConfig
+  m_EditorClassIdentifier: 
+  sceneInputs:
+  - sceneType: 0
+    startInputActions: 01000000
+    uiOnly: 1
+  - sceneType: 1
+    startInputActions: 00000000
+    uiOnly: 1
+  - sceneType: 2
+    startInputActions: 00000000
+    uiOnly: 0

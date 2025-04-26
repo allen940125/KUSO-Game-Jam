@@ -1,0 +1,48 @@
+/// <summary>
+/// 對話效果執行器
+/// </summary>
+public class DialogueEffectExecutor
+{
+    /// <summary>
+    /// 執行效果
+    /// </summary>
+    /// <param name="effect"></param>
+    public static void ExecuteEffect(string effect)
+    {
+        if (string.IsNullOrEmpty(effect)) return;
+
+        var commands = effect.Split('|');
+        foreach (var cmd in commands)
+        {
+            var parts = cmd.Split(':');
+            if (parts.Length < 2) continue;
+
+            string type = parts[0];
+            string param = parts[1];
+
+            switch (type.ToLower())
+            {
+                case "give":
+                    var itemData = param.Split('x');
+                    int itemId = int.Parse(itemData[0]);
+                    int quantity = itemData.Length > 1 ? int.Parse(itemData[1]) : 1;
+                    InventoryManager.Instance.AddItem(itemId, quantity);
+                    break;
+                
+                // case "complete":
+                //     int questId = int.Parse(param);
+                //     QuestManager.Instance.CompleteQuest(questId);
+                //     break;
+                //
+                // case "unlock":
+                //     switch (param)
+                //     {
+                //         case "shop":
+                //             GameManager.Instance.UnlockShop();
+                //             break;
+                //     }
+                //     break;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: ItemIcon
+  m_EditorClassIdentifier: 
+  m_GroupName: ItemIcon
+  m_GUID: e40ca44d731997b4480a1c58ab430961
+  m_SerializeEntries:
+  - m_GUID: 1a47bdc34223e5a44add86548fc87b9b
+    m_Address: Icons/HealthPotionIcon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ad494b2b1b664949b3bb8bf2ee11439
+    m_Address: Icons/Money
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a24aa0685dccdfd4fbd633210d29dc31
+    m_Address: Icons/ManaPotionIcon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b5cdafeb7534d5a429d7ab1a8ddc61f8, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 29b09bdead405e04cb2de340e2e9483b, type: 2}
+    - {fileID: 11400000, guid: 47d3b0e118730d54884941ed277f5a63, type: 2}

@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: UI
+  m_EditorClassIdentifier: 
+  m_GroupName: UI
+  m_GUID: 39e9d8c7adb55584d8615237d4b24362
+  m_SerializeEntries:
+  - m_GUID: 02d113cfa826e7f49a89f815d4987141
+    m_Address: UI/Menus/GameEndMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 031861522898a594c8112ee942302839
+    m_Address: UI/Windows/DialogueWindow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cd802370d60a3f4aaeaf7e0eb222566
+    m_Address: UI/Menus/GameOverMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2825bb02648282548b2c4040072bc336
+    m_Address: UI/Menus/BagMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5017933b8b30a4545aa0f33f26843ea2
+    m_Address: UI/Panels/GameStartTransitionPanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7379f7e4ca415834f845afcdccf29dd7
+    m_Address: UI/Windows/SettingsWindow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7a6001c1fba321f468ba56a7ba25753d
+    m_Address: UI/Menus/MainMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b55abf812f61b9e4589725aa86bd46e7
+    m_Address: UI/Menus/StoreMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cd0e42d67d45be5459d287b6dc40f6a1
+    m_Address: UI/HUDs/GameHUD
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f2af65fc87d4059478817aa39f763b26
+    m_Address: UI/Panels/SceneLoadingTransitionPanel
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b5cdafeb7534d5a429d7ab1a8ddc61f8, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: f7f8046d445e808469f2ee74314c32ee, type: 2}
+    - {fileID: 11400000, guid: 36eaa8534a1504b498d81f6d959d3fb4, type: 2}

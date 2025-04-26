@@ -1,0 +1,4 @@
+Name,Id,PrefabPath
+FireballEffect,1,Effects/Fireball
+IceBlastEffect,2,Effects/IceBlast
+ThunderStrike,3,Effects/ThunderStrike

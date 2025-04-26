@@ -30,6 +30,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 27891efd8e5704688b49369c90af71e0
+    m_Address: UI/Prefab/Panels/FadeInOutPanels
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 2825bb02648282548b2c4040072bc336
     m_Address: UI/Menus/BagMenu
     m_ReadOnly: 0

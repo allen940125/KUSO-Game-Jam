@@ -1,7 +1,8 @@
 using UnityEngine.UI;
 using UnityEngine;
 
-public class StoryBackGround : MonoBehaviour
+namespace Game.UI
+public class StoryBackGround : BasePanel
 {
     [SerializeField] GameObject BackGroundObject;
 
@@ -57,4 +58,19 @@ public class StoryBackGround : MonoBehaviour
     {
         IsExiting = true;
     }
+
+    protected override void Awake()
+        {
+            base.Awake();
+        }
+
+        protected override void Start()
+        {
+            base.Start();
+        }
+
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+        }
 }

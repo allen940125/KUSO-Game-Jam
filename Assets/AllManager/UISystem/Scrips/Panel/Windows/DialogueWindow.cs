@@ -12,6 +12,8 @@ public class DialogueWindow : BasePanel
     [SerializeField] GameObject optionBtnPrefab;
     [SerializeField] Transform optionBtnContainer;
     
+    [SerializeField] Image meshImage;
+    
     private void OnEnable()
     {
         var dm = DialogueManager.Instance;
@@ -34,12 +36,15 @@ public class DialogueWindow : BasePanel
     {
         characterNameText.text = line.CharacterName;
         dialogueBodyText.text = line.Text;
+        //meshImage.s
         ClearOptions();
     }
 
     private void ShowOptions(List<DialogueLine> opts)
     {
         ClearOptions();
+        dialogueBodyText.text = "";
+        
         var validOptions = opts.Where(opt => 
             DialogueConditionChecker.CheckCondition(opt.Condition)
         ).ToList();

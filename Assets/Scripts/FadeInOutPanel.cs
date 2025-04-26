@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.UI
 {
-    public class StoryBackGround : BasePanel
+    public class FateInOutPanel : BasePanel
     {
         [SerializeField] GameObject BackGroundObject;
 

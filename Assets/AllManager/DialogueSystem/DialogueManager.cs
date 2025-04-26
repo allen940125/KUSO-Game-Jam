@@ -21,6 +21,9 @@ public class DialogueManager : Singleton<DialogueManager>
 
     [SerializeField] private TextAsset _csvFile;             // 對話數據的CSV文件
 
+    [Header("故事旁白資料")]
+    public List<StoryData> stories;
+    
     protected override void Awake()
     {
         base.Awake();

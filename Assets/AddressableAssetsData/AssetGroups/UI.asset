@@ -31,7 +31,7 @@ MonoBehaviour:
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 27891efd8e5704688b49369c90af71e0
-    m_Address: UI/Panels/FadeInOutPanel
+    m_Address: UI/Windows/FadeInOutWindow
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -52,6 +52,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 7a6001c1fba321f468ba56a7ba25753d
     m_Address: UI/Menus/MainMenu
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 977d4524d95b2a84ebcca4245dc72eb1
+    m_Address: UI/Windows/StoryTextDisplayWindow
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

@@ -7,35 +7,25 @@ public class StoryData
 {
     public int storyID;
     public string storyText;
-
+    public Color color;
+    
     public StoryData(int id, string text)
     {
         storyID = id;
         storyText = text;
+        color = color;
     }
 }
 
 public class StoryFromCSV : MonoBehaviour
 {
-    public TextAsset csvFile; // 將CSV檔拖進來
-    public List<StoryData> stories = new List<StoryData>();
-
-    public float waitSecondsAfterStory = 3f;
+    [SerializeField] private TextAsset csvFile; // 將CSV檔拖進來
+    [SerializeField] private List<StoryData> stories = new List<StoryData>();
 
     private void Start()
     {
         LoadCSV();
-        StartCoroutine(StartAllStories());
-    }
-
-    IEnumerator StartAllStories()
-    {
-        foreach (StoryData story in stories)
-        {
-            //storyTextDisplay.StartStory(story.storyText);
-            Debug.Log("顯示第" + story.storyID + "個故事:" + story.storyText);
-            yield return new WaitForSeconds(waitSecondsAfterStory); // 等待5秒
-        }
+        DialogueManager.Instance.stories = stories;
     }
 
     void LoadCSV()
@@ -67,5 +57,7 @@ public class StoryFromCSV : MonoBehaviour
                 }
             }
         }
+        
+        DialogueManager.Instance.stories = stories;
     }
 }

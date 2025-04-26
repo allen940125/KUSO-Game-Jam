@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.UI
 {
-    public class FadeInOutPanel : BasePanel
+    public class FadeInOutWindow : BasePanel
     {
         [SerializeField] GameObject backGroundImage;
 

@@ -347,6 +347,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FadeInOutPanels
       objectReference: {fileID: 0}
+    - target: {fileID: 1392409017873903030, guid: 27891efd8e5704688b49369c90af71e0, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6259597994604984288, guid: 27891efd8e5704688b49369c90af71e0, type: 3}
       propertyPath: m_Pivot.x
       value: 0

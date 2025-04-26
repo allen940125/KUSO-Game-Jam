@@ -16,35 +16,45 @@ namespace Game.UI
         [SerializeField] bool IsExiting = false;
 
         protected override void Awake()
-            {
-                base.Awake();
-            }
+        {
+            base.Awake();
+        }
 
-            protected override void Start()
-            {
-                BackGroundColor = BackGroundObject.GetComponent<Image>().color;
-                BackGroundColor.a = 1f;
-                BackGroundObject.GetComponent<Image>().color = BackGroundColor;
-                base.Start();
-            }
+        protected override void Start()
+        {
+            BackGroundColor = BackGroundObject.GetComponent<Image>().color;
+            BackGroundColor.a = 1f;
+            BackGroundObject.GetComponent<Image>().color = BackGroundColor;
+            base.Start();
+        }  
 
-            protected override void OnDestroy()
-            {
-                base.OnDestroy();
-            }
+        protected override void OnDestroy()
+        {
+            base.OnDestroy();
+        }
 
+        // private void Start()
+        // {
+        //     BackGroundColor = BackGroundObject.GetComponent<Image>().color;
+        //     BackGroundColor.a = 1f;
+        //     BackGroundObject.GetComponent<Image>().color = BackGroundColor;
+        // }
+    
         private void Update()
         {
             if(IsEntering)
             {
                 if(BackGroundColor.a <= maxAlpha)
                 {
+                    
                     BackGroundColor.a += speed * Time.deltaTime;
                     BackGroundObject.GetComponent<Image>().color = BackGroundColor;   
                     Debug.Log(BackGroundColor.a);
                 }
                 else
                 {
+                    BackGroundColor.a = maxAlpha;
+                    BackGroundObject.GetComponent<Image>().color = BackGroundColor; 
                     IsEntering = false;
                 }
             }
@@ -57,6 +67,8 @@ namespace Game.UI
                 }
                 else
                 {
+                    BackGroundColor.a = 0;
+                    BackGroundObject.GetComponent<Image>().color = BackGroundColor; 
                     IsExiting = false;
                 }
             }

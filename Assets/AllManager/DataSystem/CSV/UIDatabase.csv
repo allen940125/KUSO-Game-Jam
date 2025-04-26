@@ -4,8 +4,9 @@ UI_ID,UI_Name,UI_Type,AddressableKey
 130,StoreMenu,Menu,UI/Menus/StoreMenu
 140,GameOverMenu,Menu,UI/Menus/GameOverMenu
 150,GameEndMenu,Menu,UI/Menus/GameEndMenu
-320,DialogueWindow,Window,UI/Windows/DialogueWindow
 210,SceneLoadingTransitionPanel,Panel,UI/Panels/SceneLoadingTransitionPanel
 220,GameStartTransitionPanel,Panel,UI/Panels/GameStartTransitionPanel
+230,FadeInOutPanel,Panel,UI/Panels/FadeInOutPanel
 310,SettingsWindow,Window,UI/Windows/SettingsWindow
+320,DialogueWindow,Window,UI/Windows/DialogueWindow
 410,GameHUD,HUD,UI/HUDs/GameHUD

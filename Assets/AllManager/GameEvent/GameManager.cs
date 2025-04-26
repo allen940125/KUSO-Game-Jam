@@ -66,10 +66,9 @@ public class GameManager : Singleton<GameManager>
         
         if (UnityEngine.Input.GetKeyDown(KeyCode.G))
         {
-            DialogueManager.Instance.LoadAndStartDialogue(csvFile);
+            //UIManager.OpenPanel<FadeInOutPanel>(UIType.FadeInOutPanel);
         }
     }
-
     public void SetPlayer(GameObject newPlayer)
     {
         if (newPlayer != null)

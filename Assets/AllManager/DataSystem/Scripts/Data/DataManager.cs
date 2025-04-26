@@ -44,7 +44,6 @@ namespace Datamanager
                     return;
                 }
                 Debug.Log($"✅ DataGroup 屬性數量: {propertyInfo.Length}");
-
                 for (int i = 0; i < propertyInfo.Length; i++)
                 {
                     Debug.Log($"🔍 讀取第 {i} 個 DataGroup 屬性: {propertyInfo[i].Name}");
@@ -64,6 +63,8 @@ namespace Datamanager
                         if (stringData.Length <= i)
                         {
                             Debug.LogError($"❌ stringData 數量不足! 無法讀取索引 {i}");
+                            Debug.LogError($"❌ stringData 數量: {stringData.Length}");
+                            Debug.LogError($"❌ stringData: {stringData}");
                             continue;
                         }
 

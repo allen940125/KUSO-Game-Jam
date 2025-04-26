@@ -36,7 +36,8 @@ public class DialogueWindow : BasePanel
     {
         characterNameText.text = line.CharacterName;
         dialogueBodyText.text = line.Text;
-        //meshImage.s
+        meshImage.gameObject.SetActive(false);
+        
         ClearOptions();
     }
 
@@ -44,6 +45,7 @@ public class DialogueWindow : BasePanel
     {
         ClearOptions();
         dialogueBodyText.text = "";
+        meshImage.gameObject.SetActive(true);
         
         var validOptions = opts.Where(opt => 
             DialogueConditionChecker.CheckCondition(opt.Condition)

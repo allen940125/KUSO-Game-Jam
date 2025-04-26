@@ -69,7 +69,6 @@ public class GameManager : Singleton<GameManager>
             //UIManager.OpenPanel<FadeInOutPanel>(UIType.FadeInOutPanel);
         }
     }
-
     public void SetPlayer(GameObject newPlayer)
     {
         if (newPlayer != null)

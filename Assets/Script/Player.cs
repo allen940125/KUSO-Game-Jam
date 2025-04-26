@@ -4,7 +4,8 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    public float speed = 10;
+    [SerializeField] private float speed = 10;
+    [SerializeField] private float multiplier;
     private float moveInput;
     private Rigidbody2D rb;
     private Animator animator;
@@ -17,7 +18,7 @@ public class Player : MonoBehaviour
     void Update()
     {
         moveInput = Input.GetAxis("Horizontal"); 
-        rb.linearVelocityX = moveInput * speed;
+        rb.linearVelocityX = moveInput * speed * multiplier;
     }
 
     void FixedUpdate()
@@ -34,5 +35,8 @@ public class Player : MonoBehaviour
         
     }
     
-
+    public void SetMultiplier(float target)
+    {
+        multiplier = target;
+    }
 }

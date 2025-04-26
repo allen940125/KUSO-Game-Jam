@@ -67,7 +67,6 @@ namespace Game.UI
             isRemove = true;
             SetActive(false);
             Destroy(gameObject); // 若未來有面板回收系統，可替換成回收邏輯
-
             // if (!GameManager.Instance.UIManager.HasOpenUIInGroup(UIGroup.Menu))
             // {
             //     Debug.Log("全清除：切回 Gameplay 狀態");

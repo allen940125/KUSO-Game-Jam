@@ -115,6 +115,7 @@ public class DialogueManager : Singleton<DialogueManager>
                 break;
 
             case DialogueLineType.End:
+                GameManager.Instance.Player.GetComponent<Player>().SetMultiplier(1);
                 OnDialogueEnd?.Invoke();
                 break;
         }

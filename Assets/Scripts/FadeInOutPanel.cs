@@ -1,6 +1,5 @@
 using UnityEngine.UI;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace Game.UI
 {
@@ -12,6 +11,7 @@ namespace Game.UI
         [SerializeField] float changespeed = 4f;
 
         [SerializeField] float maxAlpha = 1f;
+        [SerializeField] float minAlpha = 0f;
 
         [SerializeField] bool isEntering = false;
         [SerializeField] bool isExiting = false;
@@ -58,30 +58,58 @@ namespace Game.UI
             }
             else if(isExiting)
             {
-                if(backGroundColor.a >= 0)
+                if(backGroundColor.a >= minAlpha)
                 {
                     backGroundColor.a -= changespeed * Time.deltaTime;
                     backGroundImage.GetComponent<Image>().color = backGroundColor;   
                 }
                 else
                 {
-                    backGroundColor.a = 0;
+                    backGroundColor.a = minAlpha;
                     backGroundImage.GetComponent<Image>().color = backGroundColor; 
                     isExiting = false;
                 }
             }
         }
-        public void EnterStory(float alpha, float speed)
+        public void EnterStory(float maxalpha, float speed)
         {
-            maxAlpha = alpha;
+            maxAlpha = maxalpha;
             changespeed = speed;
             isEntering = true;
         }
+
+        public void EnterStory(float speed)
+        {
+            changespeed = speed;
+            isEntering = true;
+        }
+
+        public void EnterStory()
+        {
+            isEntering = true;
+        }
+
+        public void ExitStory(float minalpha, float speed)
+        {
+            minAlpha = minalpha;
+            changespeed = speed;
+            isExiting = true;
+        }   
 
         public void ExitStory(float speed)
         {
             changespeed = speed;
             isExiting = true;
+        }
+
+        public void ExitStory()
+        {
+            isExiting = true;
+        }
+
+        public void SetColor(Color color)
+        {
+            backGroundColor = color;
         }
     }
 }

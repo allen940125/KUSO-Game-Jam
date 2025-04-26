@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Buffs
+  m_EditorClassIdentifier: 
+  m_GroupName: Buffs
+  m_GUID: b2286058c2096b246a273ecd2a84f20f
+  m_SerializeEntries:
+  - m_GUID: 6646022200ce6ea42badf4bf17758aec
+    m_Address: Buffs/ManaBoost
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef24b5221de51234a8d61e9aa1f46b3d
+    m_Address: Buffs/HealthBoost
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: b5cdafeb7534d5a429d7ab1a8ddc61f8, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 6d5e954baa7c60c4695eaf80628c4a3a, type: 2}
+    - {fileID: 11400000, guid: 8dfe6ad4181a41d4eb14729ba9768a28, type: 2}

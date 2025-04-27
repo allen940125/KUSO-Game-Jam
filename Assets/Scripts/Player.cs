@@ -21,6 +21,7 @@ public class Player : MonoBehaviour
         Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
          rb = GetComponent<Rigidbody2D>();
          animator = GetComponentInChildren<Animator>();
+         GameManager.Instance.MainGameMediator.RealTimePlayerData.SuspicionValue = 0;
     }
 
     void Update()

@@ -77,6 +77,10 @@ public class GameManager : Singleton<GameManager>
             
             //UIManager.GetPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow).StartStory("444444");
         }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.T))
+        {
+            StartCoroutine(UIManager.GetPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow).EndStories());
+        }
         else if(UnityEngine.Input.GetKeyDown(KeyCode.Escape))
         {
             UIManager.OpenPanel<SettingsWindow>(UIType.SettingsWindow);

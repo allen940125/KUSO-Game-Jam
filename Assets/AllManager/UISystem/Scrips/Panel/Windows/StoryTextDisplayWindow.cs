@@ -35,7 +35,7 @@ namespace Game.UI
         protected override void Start()
         {
             base.Start();
-            StartCoroutine(StartAllStories());
+            StartCoroutine(StartStories());
         }  
 
         protected override void OnDestroy()
@@ -85,8 +85,14 @@ namespace Game.UI
             fullText = storyData.storyText;
             StartCoroutine(ShowText(storyData.color));
         }
+
+        public void EndStory(StoryData storyData)
+        {
+            fullText = storyData.storyText;
+            StartCoroutine(ShowText(storyData.color));
+        }
         
-        IEnumerator StartAllStories()
+        IEnumerator StartStories()
         {
             List<StoryData> stories = DialogueManager.Instance.stories;
             Debug.Log(stories.Count);
@@ -94,34 +100,59 @@ namespace Game.UI
             Debug.Log("故事開始，玩家無法移動");
             foreach (StoryData story in stories)
             {
-                NeedText2 = story.storyID == 3; // 如果ID是3，啟動NeedText2
-                if(story.storyID == 2)
+                if(story.storyID <= 5)
                 {
-                    storyText.transform.position += new Vector3(0, textOffset, 0);
-                    storyText2.transform.position += new Vector3(0, text2Y, 0);
-                    realWaitSecondsAfterStory = 0f;
+                    NeedText2 = story.storyID == 3; // 如果ID是3，啟動NeedText2
+                    if(story.storyID == 2)
+                    {
+                        storyText.transform.position += new Vector3(0, textOffset, 0);
+                        storyText2.transform.position += new Vector3(0, text2Y, 0);
+                        realWaitSecondsAfterStory = 0f;
+                    }
+                    else if(story.storyID == 4)
+                    {
+                        storyText.transform.position -= new Vector3(0, textOffset, 0);
+                        realWaitSecondsAfterStory = waitSecondsAfterStory;
+                    }
+                    else
+                    {
+                        realWaitSecondsAfterStory = waitSecondsAfterStory;
+                    }
+                    StartStory(story);
+                    Debug.Log("顯示第" + story.storyID + "個故事:" + story.storyText);
+                    yield return new WaitUntil(() => isShowText); // 等到文字顯示完畢
+                    yield return new WaitForSeconds(realWaitSecondsAfterStory); // 根據ID決定等待時間
                 }
-                else if(story.storyID == 4)
-                {
-                    storyText.transform.position -= new Vector3(0, textOffset, 0);
-                    realWaitSecondsAfterStory = waitSecondsAfterStory;
-                }
-                else
-                {
-                    realWaitSecondsAfterStory = waitSecondsAfterStory;
-                }
-
-                StartStory(story);
-                Debug.Log("顯示第" + story.storyID + "個故事:" + story.storyText);
-
-                yield return new WaitUntil(() => isShowText); // 等到文字顯示完畢
-                yield return new WaitForSeconds(realWaitSecondsAfterStory); // 根據ID決定等待時間
             }
             storyText.text = "";
             storyText2.text = "";
             GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).ExitStory(0, 4);
             GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove = true;
             Debug.Log("故事結束，淡出後玩家可以移動");
+        }
+
+        public IEnumerator EndStories()
+        {
+            GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory(1, 4);
+            yield return new WaitForSeconds(0.35f);
+            List<StoryData> stories = DialogueManager.Instance.stories;
+            Debug.Log(stories.Count);
+            GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove = false;
+            Debug.Log("GoodEnd結尾故事開始，玩家無法移動");
+            foreach (StoryData story in stories)
+            {
+                if(story.storyID >= 6)
+                {
+                EndStory(story);
+                Debug.Log("顯示第" + story.storyID + "個故事:" + story.storyText);
+                yield return new WaitUntil(() => isShowText); // 等到文字顯示完畢
+                yield return new WaitForSeconds(realWaitSecondsAfterStory); // 根據ID決定等待時間
+                }
+            }
+            storyText.text = "";
+            storyText2.text = "";
+            Debug.Log("GoodEnd結尾故事結束");
+
         }
     }
 }

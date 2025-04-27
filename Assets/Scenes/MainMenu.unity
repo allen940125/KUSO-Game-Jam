@@ -308,6 +308,70 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.size
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[5].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[5].color.g
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[5].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[5].storyID
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[6].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[6].color.g
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[6].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[6].storyID
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[7].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[7].color.g
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[7].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[7].storyID
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[5].storyText
+      value: "\u6C92\u6709\u4EBA\u9700\u8981\u5FC3\u9748\u8AB2\u7A0B"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[6].storyText
+      value: "\u5065\u5EB7\u3001\u81EA\u4FE1\u3001\u6210\u9577"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[7].storyText
+      value: "\u300C\u5982\u679C\u6709\u500B\u5730\u65B9\uFF0C\u80FD\u8B93\u6211\u4E0D\u5FC5\u518D\u6490\u2026\u2026\u90A3\u4E5F\u8A31\u503C\u5F97\u8A66\u4E00\u6B21\u3002\u300D"
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

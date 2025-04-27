@@ -463,7 +463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
       propertyPath: stories.Array.data[7].storyText
-      value: "\u300C\u5982\u679C\u6709\u500B\u5730\u65B9\uFF0C\u80FD\u8B93\u6211\u4E0D\u5FC5\u518D\u6490\u2026\u2026\u90A3\u4E5F\u8A31\u503C\u5F97\u8A66\u4E00\u6B21\u3002\u300D"
+      value: "\u4F60\u9023\u7D50\u4E86\u55CE?"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

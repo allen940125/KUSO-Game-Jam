@@ -43,6 +43,31 @@ public class DialogueEffectExecutor
                         GameManager.Instance.MainGameMediator.RealTimePlayerData.SuspicionValue += value;
                     }
                     break;
+                case "method":
+                {
+                    int dialogueEventID = int.Parse(param);
+                    if (dialogueEventID == 1)
+                    {
+                        SpecialEvents.Instance.TriggerEvent1();
+                    }
+                    else if (dialogueEventID == 2)
+                    {
+                        SpecialEvents.Instance.TriggerEvent2();
+                    }
+                    else if (dialogueEventID == 3)
+                    {
+                        SpecialEvents.Instance.TriggerEvent3();
+                    }
+                    else if (dialogueEventID == 4)
+                    {
+                        SpecialEvents.Instance.TriggerEvent4();
+                    }
+                    else if (dialogueEventID == 5)
+                    {
+                        SpecialEvents.Instance.TriggerEvent5();
+                    }
+                    break;
+                }
                 // case "give":
                 //     var itemData = param.Split('x');
                 //     int itemId = int.Parse(itemData[0]);

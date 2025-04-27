@@ -1,5 +1,6 @@
 using UnityEngine;
 using Gamemanager;
+using System.ComponentModel;
 
 public class RealTimePlayerData
 {
@@ -13,4 +14,6 @@ public class RealTimePlayerData
     public int SuspicionValue;
         
     public bool CanPlayerMove = true;
+
+    public bool IsListeningYajuuSenpai = false;
 }

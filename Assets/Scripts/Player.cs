@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove)
+        if(GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove && !GameManager.Instance.MainGameMediator.RealTimePlayerData.IsListeningYajuuSenpai)
         {
             moveInput = Input.GetAxis("Horizontal"); 
         }

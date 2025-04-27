@@ -77,6 +77,7 @@ public class SpecialEvents : Singleton<SpecialEvents>
         yield return new WaitForSeconds(eventAudio2.audioClip.length);
 
         Debug.Log("事件2音效結束，可以做自己的後續操作");
+        GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).NoYarimasune();
         GameManager.Instance.MainGameMediator.RealTimePlayerData.IsListeningYajuuSenpai = false;
         // 例如：開啟某個UI
         // GameManager.Instance.UIManager.OpenPanel<SomeUIPanel>();

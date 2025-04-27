@@ -67,12 +67,23 @@ public class GameManager : Singleton<GameManager>
         if (UnityEngine.Input.GetKeyDown(KeyCode.G))
         {
             UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
-            UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory(1,4);
+            UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory();
         }
         if (UnityEngine.Input.GetKeyDown(KeyCode.H))
         {
             UIManager.OpenPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow);
             //UIManager.GetPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow).StartStory("444444");
+        }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.J))
+        {
+            UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
+            UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).SetColor(new Color(Color.blue.r, Color.blue.g, Color.blue.b, 0f));
+            UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory();
+        }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.T))
+        {
+            UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
+            UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).ExitStory();
         }
         else if(UnityEngine.Input.GetKeyDown(KeyCode.Escape))
         {

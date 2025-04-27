@@ -112,7 +112,7 @@ namespace Game.UI
         {
             Debug.Log("Click OnReturnToMainMenuButtonClicked");
             AudioManager.Instance.PlayUISound(audio_NormalBtn);
-            GameManager.Instance.SceneTransitionManager.LoadScene(SceneType.MainMenuScene);
+            GameManager.Instance.SceneTransitionManager.LoadScene(SceneType.MainMenu);
         }
 
         //設定類別按鈕

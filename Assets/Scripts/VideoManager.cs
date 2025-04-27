@@ -93,7 +93,7 @@ public class VideoManager : MonoBehaviour
         yield return new WaitForSeconds((float)clip.length - flickerTime);
 
         videoPlayer.targetCameraAlpha = 0f; // 隱藏
+        PlayVideo("POPOPO",false);
         
-        SceneManager.LoadScene("MainMenu");
     }
 }

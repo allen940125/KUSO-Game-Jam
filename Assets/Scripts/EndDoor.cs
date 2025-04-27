@@ -15,7 +15,8 @@ public class EndDoor : MonoBehaviour
             }
             else
             {
-                FindFirstObjectByType<VideoManager>().PlayVideo("TVError",false);
+                FindFirstObjectByType<VideoManager>().PlayVideo("TVError",true);
+                
             }
         }
     }

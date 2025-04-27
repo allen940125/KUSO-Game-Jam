@@ -1,3 +1,5 @@
+using UnityEngine;
+
 /// <summary>
 /// 對話效果執行器
 /// </summary>
@@ -9,6 +11,7 @@ public class DialogueEffectExecutor
     /// <param name="effect"></param>
     public static void ExecuteEffect(string effect)
     {
+        Debug.Log("效果值" + effect);
         if (string.IsNullOrEmpty(effect)) return;
 
         var commands = effect.Split('|');
@@ -20,8 +23,26 @@ public class DialogueEffectExecutor
             string type = parts[0];
             string param = parts[1];
 
+            Debug.Log("抓到的類型" + type.ToLower());
+            
             switch (type.ToLower())
             {
+                case "fell":
+                    var itemData = param.Split('*');
+                    string fall = itemData[0];
+                    int value = itemData.Length > 1 ? int.Parse(itemData[1]) : 1;
+                    
+                    Debug.Log("目標心情為" + fall + "值是" + value);
+                    
+                    if (fall == "Excitement")
+                    {
+                        GameManager.Instance.MainGameMediator.RealTimePlayerData.ExcitementValue += value;
+                    }
+                    else if (fall == "Suspicion")
+                    {
+                        GameManager.Instance.MainGameMediator.RealTimePlayerData.SuspicionValue += value;
+                    }
+                    break;
                 // case "give":
                 //     var itemData = param.Split('x');
                 //     int itemId = int.Parse(itemData[0]);

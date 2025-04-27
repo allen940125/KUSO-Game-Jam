@@ -9,5 +9,8 @@ public class RealTimePlayerData
     public int PlayerCurWineBottle = 0;
     public float PlayerCurWineBottleRemainingAlcohol = 0;
 
-    public bool CanPlayerMove = false;
+    public int ExcitementValue;
+    public int SuspicionValue;
+        
+    public bool CanPlayerMove = true;
 }

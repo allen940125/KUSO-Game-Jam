@@ -22,6 +22,7 @@ public class StoryFromCSV : MonoBehaviour
     [SerializeField] private TextAsset csvFile; // 將CSV檔拖進來
     [SerializeField] private List<StoryData> stories = new List<StoryData>();
 
+
     private void Start()
     {
         LoadCSV();

@@ -17,8 +17,23 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        moveInput = Input.GetAxis("Horizontal"); 
-        rb.linearVelocityX = moveInput * speed * multiplier;
+        if(GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove == true)
+        {
+            moveInput = Input.GetAxis("Horizontal"); 
+            rb.linearVelocityX = moveInput * speed * multiplier;
+        }
+        /*if (UnityEngine.Input.GetKeyDown(KeyCode.L))
+        {
+            FindFirstObjectByType<VideoManager>().PlayVideo("TVError",true);
+        }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.O))
+        {
+            FindFirstObjectByType<VideoManager>().PlayVideo("JumpScare",false);
+        }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.P))
+        {
+            FindFirstObjectByType<VideoManager>().PlayVideo("POPOPO",false);
+        }*/
     }
 
     void FixedUpdate()

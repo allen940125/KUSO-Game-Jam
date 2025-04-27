@@ -128,6 +128,7 @@ namespace Game.UI
             storyText2.text = "";
             GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).ExitStory(0, 4);
             GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove = true;
+            GameManager.Instance.MainGameMediator.RealTimePlayerData.IsListeningYajuuSenpai = false;
             Debug.Log("故事結束，淡出後玩家可以移動");
         }
 

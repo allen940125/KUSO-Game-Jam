@@ -8,7 +8,7 @@ public class EndDoor : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if (GameManager.Instance.MainGameMediator.RealTimePlayerData.SuspicionValue >= 90)
+            if (GameManager.Instance.MainGameMediator.RealTimePlayerData.SuspicionValue >= 50)
             {
                 GameManager.Instance.UIManager.OpenPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow);
                 StartCoroutine(GameManager.Instance.UIManager.GetPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow).EndStories());

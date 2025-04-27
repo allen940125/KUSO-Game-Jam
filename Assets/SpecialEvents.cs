@@ -88,7 +88,7 @@ public class SpecialEvents : Singleton<SpecialEvents>
 
     private IEnumerator TriggerEvent4Coroutine()
     {
-        Instantiate(eventPrefab4, spawnRoot);
+        //Instantiate(eventPrefab4, spawnRoot);
         AudioManager.Instance.PlayRandomSFX(eventAudio4);
 
         yield return new WaitForSeconds(1.5f);

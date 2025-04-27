@@ -25,7 +25,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
                     {
                         GameObject singletonObject = new GameObject(typeof(T).Name);
                         _instance = singletonObject.AddComponent<T>();
-                        DontDestroyOnLoad(singletonObject);
+                        //DontDestroyOnLoad(singletonObject);
                         Debug.Log($"[Singleton<{typeof(T)}>] 動態創建 Singleton：{singletonObject.name}");
                     }
                 }
@@ -44,7 +44,7 @@ public abstract class Singleton<T> : MonoBehaviour where T : MonoBehaviour
         }
 
         _instance = this as T;
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         // 其他初始化代碼...
     }

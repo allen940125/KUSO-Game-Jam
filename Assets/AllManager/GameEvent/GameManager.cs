@@ -55,6 +55,8 @@ public class GameManager : Singleton<GameManager>
         TransitionUIManager.Initialize();
         UIManager.Initialize();
         InputManagers.Initialize();
+        
+        DontDestroyOnLoad(gameObject);
     }
     
     private void Start()

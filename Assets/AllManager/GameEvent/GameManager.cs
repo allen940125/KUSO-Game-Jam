@@ -85,6 +85,12 @@ public class GameManager : Singleton<GameManager>
         {
             StartCoroutine(UIManager.GetPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow).EndStories());
         }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.Y))
+        {
+            UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
+            UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).Yarimasune();
+            UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory(1,0.1f);
+        }
         else if(UnityEngine.Input.GetKeyDown(KeyCode.Escape))
         {
             UIManager.OpenPanel<SettingsWindow>(UIType.SettingsWindow);

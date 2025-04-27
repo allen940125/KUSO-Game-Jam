@@ -153,7 +153,6 @@ namespace Game.UI
             storyText.text = "";
             storyText2.text = "";
             Debug.Log("GoodEnd結尾故事結束");
-
         }
     }
 }

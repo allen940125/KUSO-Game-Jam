@@ -119,6 +119,8 @@ MonoBehaviour:
   audio_NormalBtn:
     audioClip: {fileID: 0}
   backGroundImage: {fileID: 6795766421515727547}
+  YajuuSenpai: {fileID: 8957324059118975939, guid: 7efc54e67d226499fa64658a6c8cc10f, type: 3}
+  nowImage: {fileID: 1930863914461325265}
   backGroundColor: {r: 0, g: 0, b: 0, a: 0}
   changespeed: 4
   maxAlpha: 1
@@ -183,7 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1

@@ -41,7 +41,7 @@ namespace Game.UI
         void OnBtn_GoMainMenu()
         {
             Debug.Log("Click Btn_Cancel");
-            GameManager.Instance.SceneTransitionManager.LoadScene(SceneType.MainMenuScene);
+            GameManager.Instance.SceneTransitionManager.LoadScene(SceneType.MainMenu);
         }
     }
 }

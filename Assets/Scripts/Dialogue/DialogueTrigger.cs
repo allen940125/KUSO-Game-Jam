@@ -10,7 +10,7 @@ public class DialogueTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             DialogueManager.Instance.LoadAndStartDialogue(_csvFile);
-            GameManager.Instance.Player.GetComponent<Player>().SetMultiplier(0);
+            GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove = false;
         }
     }
 }

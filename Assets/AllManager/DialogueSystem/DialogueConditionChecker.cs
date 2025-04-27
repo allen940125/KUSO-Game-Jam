@@ -23,14 +23,14 @@ public class DialogueConditionChecker
 
         switch (type.ToLower())
         {
-            case "item":
-                var itemParts = param.Split('x');
-                int itemId = int.Parse(itemParts[0]);
-                int requiredCount = itemParts.Length > 1 ? int.Parse(itemParts[1]) : 1;
-            
-                var item = InventoryManager.Instance.GetInventoryData(itemId);
-                return item != null && item.quantity >= requiredCount;
-            
+            // case "item":
+            //     var itemParts = param.Split('x');
+            //     int itemId = int.Parse(itemParts[0]);
+            //     int requiredCount = itemParts.Length > 1 ? int.Parse(itemParts[1]) : 1;
+            //
+            //     var item = InventoryManager.Instance.GetInventoryData(itemId);
+            //     return item != null && item.quantity >= requiredCount;
+            //
             // case "quest":
             //     int questId = int.Parse(param);
             //     return QuestManager.Instance.IsQuestCompleted(questId);

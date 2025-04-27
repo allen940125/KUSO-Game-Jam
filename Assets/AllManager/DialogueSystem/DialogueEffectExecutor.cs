@@ -22,13 +22,13 @@ public class DialogueEffectExecutor
 
             switch (type.ToLower())
             {
-                case "give":
-                    var itemData = param.Split('x');
-                    int itemId = int.Parse(itemData[0]);
-                    int quantity = itemData.Length > 1 ? int.Parse(itemData[1]) : 1;
-                    InventoryManager.Instance.AddItem(itemId, quantity);
-                    break;
-                
+                // case "give":
+                //     var itemData = param.Split('x');
+                //     int itemId = int.Parse(itemData[0]);
+                //     int quantity = itemData.Length > 1 ? int.Parse(itemData[1]) : 1;
+                //     InventoryManager.Instance.AddItem(itemId, quantity);
+                //     break;
+                //
                 // case "complete":
                 //     int questId = int.Parse(param);
                 //     QuestManager.Instance.CompleteQuest(questId);

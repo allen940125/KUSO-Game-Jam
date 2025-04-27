@@ -177,6 +177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _currentLineId: 0
   _csvFile: {fileID: 0}
+  stories: []
 --- !u!114 &8756391268631179391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -203,9 +204,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc8bef3ba35034b9d91e86ac75fecb7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  csvFile: {fileID: 4900000, guid: 5924274d0ff4f42bc9ebd5500f96d124, type: 3}
-  stories: []
-  waitSecondsAfterStory: 3
+  csvFile: {fileID: 0}
+  stories:
+  - storyID: 1
+    storyText: "\u3010\u65C1\u767D\u3011\uFF1A \u4F60\u662F\u4E00\u500B\u767D\u9818\u968E\u5C64\uFF0C\u6700\u8FD1\u88AB\u516C\u53F8\u7D66\u8FAD\u9000\u4E86 "
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - storyID: 2
+    storyText: "\u3010\u4E3B\u89D2\u5167\u5FC3\u65C1\u767D\u3011\uFF1A"
+    color: {r: 1, g: 1, b: 1, a: 1}
+  - storyID: 3
+    storyText: "\u300C\u6211\u5DF2\u7D93\u4E0D\u8A18\u5F97\uFF0C\u4E0A\u4E00\u6B21\u597D\u597D\u7761\u89BA\u662F\u4EC0\u9EBC\u6642\u5019\u4E86\u3002\u4E09\u5929\u6C92\u5403\u6771\u897F\uFF0C\u4E94\u5929\u6C92\u96E2\u958B\u623F\u9593\u3002\u53EA\u6709\u624B\u6A5F\u9084\u767C\u8457\u5149\uFF0C\u63D0\u9192\u6211\uFF1A\u4F60\u9084\u9192\u8457\u3002\u300D "
+    color: {r: 1, g: 0.9039522, b: 0, a: 1}
+  - storyID: 4
+    storyText: "\u300C\u4ED6\u5011\u8AAA\u6211\u662F\u300E\u592A\u654F\u611F\u300F\u3001\u8AAA\u6211\u300E\u4E0D\u5920\u52AA\u529B\u300F\u2026\u2026\u6211\u8A66\u4E86\u554A\uFF0C\u6211\u5DF2\u7D93\u52AA\u529B\u7684\u8A66\u4E86\u3002\u53EA\u662F\u6C92\u6709\u4EBA\u770B\u5230\u2026\u300D"
+    color: {r: 1, g: 0.90588236, b: 0, a: 1}
+  - storyID: 5
+    storyText: "\u300C\u5982\u679C\u6709\u500B\u5730\u65B9\uFF0C\u80FD\u8B93\u6211\u4E0D\u5FC5\u518D\u6490\u2026\u2026\u90A3\u4E5F\u8A31\u503C\u5F97\u8A66\u4E00\u6B21\u3002\u300D"
+    color: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &1376877183433635412
 GameObject:
   m_ObjectHideFlags: 0

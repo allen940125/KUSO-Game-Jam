@@ -37,6 +37,7 @@ public class TeleportManager : Singleton<TeleportManager>
         TeleportData data = teleportDataList.Find(x => x.id == id);
         if (data != null)
         {
+            Debug.Log("玩家位置" + GameManager.Instance.Player.transform.position);
             GameManager.Instance.Player.transform.position = data.teleportPosition.position;
             UpdateConfiner(data);
         }

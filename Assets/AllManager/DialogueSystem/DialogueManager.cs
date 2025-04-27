@@ -129,7 +129,7 @@ public class DialogueManager : Singleton<DialogueManager>
                 break;
 
             case DialogueLineType.End:
-                GameManager.Instance.Player.GetComponent<Player>().SetMultiplier(1);
+                GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove = true;
                 OnDialogueEnd?.Invoke();
                 break;
         }

@@ -200,8 +200,8 @@ MonoBehaviour:
     audioClip: {fileID: 0}
   storyText: {fileID: 535467459694841170}
   storyText2: {fileID: 509315281294401039}
-  typeSpeed: 0.001
-  waitSecondsAfterStory: 3
+  typeSpeed: 0.00001
+  waitSecondsAfterStory: 1
 --- !u!1 &9221417965165555540
 GameObject:
   m_ObjectHideFlags: 0

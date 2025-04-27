@@ -21,7 +21,7 @@ public class GameManager : Singleton<GameManager>
     public GameObject Player 
     { 
         get => player; 
-        private set => player = value; 
+        set => player = value; 
     }
     
     public SceneTransitionManager SceneTransitionManager { get; private set; } = new SceneTransitionManager();

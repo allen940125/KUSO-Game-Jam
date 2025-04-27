@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -9,6 +10,12 @@ public class Player : MonoBehaviour
     private float moveInput;
     private Rigidbody2D rb;
     private Animator animator;
+
+    private void Awake()
+    {
+        GameManager.Instance.Player = this.gameObject;
+    }
+
     void Start()
     {
          rb = GetComponent<Rigidbody2D>();
@@ -17,11 +24,16 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        if(GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove == true)
+        if(GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove)
         {
             moveInput = Input.GetAxis("Horizontal"); 
-            rb.linearVelocityX = moveInput * speed * multiplier;
         }
+        else
+        {
+            moveInput = 0;
+        }
+        
+        rb.linearVelocityX = moveInput * speed * multiplier;
         /*if (UnityEngine.Input.GetKeyDown(KeyCode.L))
         {
             FindFirstObjectByType<VideoManager>().PlayVideo("TVError",true);

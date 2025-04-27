@@ -1,4 +1,5 @@
 using System.Collections;
+using Game.Audio;
 using Game.Input;
 using Game.SceneManagement;
 using UnityEngine;
@@ -17,6 +18,8 @@ public class GameManager : Singleton<GameManager>
     }
     
     [SerializeField] private GameObject player;
+    
+    [SerializeField] private AudioData _audioData;
     
     public GameObject Player 
     { 
@@ -66,11 +69,12 @@ public class GameManager : Singleton<GameManager>
         
         if (UnityEngine.Input.GetKeyDown(KeyCode.G))
         {
-            TeleportManager.Instance.TeleportWithFade(1);
+            //TeleportManager.Instance.TeleportWithFade(1);
+            AudioManager.Instance.PlaySFX(_audioData);
         }
         if (UnityEngine.Input.GetKeyDown(KeyCode.H))
         {
-            TeleportManager.Instance.TeleportWithFade(2);
+            //TeleportManager.Instance.TeleportWithFade(2);
             // UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
             //UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).ExitStory(1,4);
             // UIManager.OpenPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow);

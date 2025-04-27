@@ -1,31 +1,48 @@
 using UnityEngine;
-using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 using Game.UI;
 
-
-public class TeleportManager : MonoBehaviour
+public class TeleportManager : Singleton<TeleportManager>
 {
-    
-    public Vector3[] teleportPositions;    
-    public void TeleportWithFade(int index)
+    [System.Serializable]
+    public class TeleportData
     {
-        if (index >= 0 && index < teleportPositions.Length)
+        public int id;
+        public Transform teleportPosition;
+    }
+
+    public List<TeleportData> teleportDataList;
+
+    public void TeleportWithFade(int id)
+    {
+        StartCoroutine(TeleportCoroutine(id));
+    }
+
+    private IEnumerator TeleportCoroutine(int id)
+    {
+        // 開啟淡入淡出畫面
+        GameManager.Instance.UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
+        var fadeWindow = GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
+        fadeWindow.EnterStory(1, 4);
+
+        // 等淡入時間
+        yield return new WaitForSeconds(1f);
+
+        // 找到對應ID的TeleportData
+        TeleportData data = teleportDataList.Find(x => x.id == id);
+        if (data != null)
         {
-            StartCoroutine(TeleportCoroutine(index));
+            GameManager.Instance.Player.transform.position = data.teleportPosition.position;
         }
         else
         {
-            Debug.LogWarning("傳送位置索引錯誤！");
+            Debug.LogWarning($"找不到ID為 {id} 的傳送資料！");
         }
-    }
 
-    private IEnumerator TeleportCoroutine(int index)
-    {
-        GameManager.Instance.UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
+        fadeWindow.EnterStory(0, 4);
 
-        transform.position = teleportPositions[index];
-
-        UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory(1,4);
+        // 可以選擇這時候馬上淡出，也可以交給FadeInOutWindow自己處理
+        // 這裡先不手動 ExitStory，因為 EnterStory(1,4)裡應該自己管理淡出動畫
     }
 }

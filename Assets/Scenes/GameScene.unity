@@ -389,7 +389,7 @@ MonoBehaviour:
   eventAudio1:
     audioClip: {fileID: 8300000, guid: 73abb638c65d7fa4fb17aa9e15390595, type: 3}
   eventAudio2:
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 87a4ecb7a4dd50b42a4b5e15a4d20435, type: 3}
   eventAudio3:
     audioClip: {fileID: 8300000, guid: 73abb638c65d7fa4fb17aa9e15390595, type: 3}
   eventAudio4:

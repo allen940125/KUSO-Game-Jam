@@ -19,8 +19,6 @@ public class GameManager : Singleton<GameManager>
     
     [SerializeField] private GameObject player;
     
-    [SerializeField] private AudioData _audioData;
-    
     public GameObject Player 
     { 
         get => player; 
@@ -69,11 +67,6 @@ public class GameManager : Singleton<GameManager>
         // 若 UIManager 為 null 可做防呆檢查
         UIManager?.Update();
         
-        if (UnityEngine.Input.GetKeyDown(KeyCode.G))
-        {
-            //TeleportManager.Instance.TeleportWithFade(1);
-            AudioManager.Instance.PlaySFX(_audioData);
-        }
         if (UnityEngine.Input.GetKeyDown(KeyCode.H))
         {
             //TeleportManager.Instance.TeleportWithFade(2);

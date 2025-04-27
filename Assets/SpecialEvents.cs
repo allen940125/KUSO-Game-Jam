@@ -66,12 +66,19 @@ public class SpecialEvents : Singleton<SpecialEvents>
 
     private IEnumerator TriggerEvent2Coroutine()
     {
-        Instantiate(eventPrefab2, spawnRoot);
+        //Instantiate(eventPrefab2, spawnRoot);
         AudioManager.Instance.PlayRandomSFX(eventAudio2);
+        GameManager.Instance.UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
+        GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).Yarimasune();
+        GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory(1, 0.05f);
+        GameManager.Instance.MainGameMediator.RealTimePlayerData.IsListeningYajuuSenpai = true;
+        Debug.Log( GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove);
 
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(eventAudio2.audioClip.length);
 
         Debug.Log("事件2音效結束，可以做自己的後續操作");
+        GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).NoYarimasune();
+        GameManager.Instance.MainGameMediator.RealTimePlayerData.IsListeningYajuuSenpai = false;
         // 例如：開啟某個UI
         // GameManager.Instance.UIManager.OpenPanel<SomeUIPanel>();
     }

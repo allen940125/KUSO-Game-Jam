@@ -7,7 +7,7 @@ namespace Game.SceneManagement
 {
     public enum SceneType
     {
-        MainMenuScene,
+        MainMenu,
         LoadingScene,
         TestGameScene1,
         TestGameScene2,

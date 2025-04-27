@@ -382,14 +382,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   eventPrefab1: {fileID: 95852936393998775, guid: 14e5d5f17f177cc4294ef4b3f3f48ee5, type: 3}
-  eventPrefab2: {fileID: 0}
+  eventPrefab2: {fileID: 95852936393998775, guid: 14e5d5f17f177cc4294ef4b3f3f48ee5, type: 3}
   eventPrefab3: {fileID: 0}
   eventPrefab4: {fileID: 0}
   eventPrefab5: {fileID: 0}
   eventAudio1:
     audioClip: {fileID: 8300000, guid: 73abb638c65d7fa4fb17aa9e15390595, type: 3}
   eventAudio2:
-    audioClip: {fileID: 0}
+    audioClip: {fileID: 8300000, guid: 73abb638c65d7fa4fb17aa9e15390595, type: 3}
   eventAudio3:
     audioClip: {fileID: 0}
   eventAudio4:

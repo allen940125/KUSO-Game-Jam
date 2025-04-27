@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     private float moveInput;
     private Rigidbody2D rb;
     private Animator animator;
-
+    
     private void Awake()
     {
         GameManager.Instance.Player = this.gameObject;
@@ -31,6 +31,12 @@ public class Player : MonoBehaviour
         else
         {
             moveInput = 0;
+        }
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            Debug.Log("興憤值" + GameManager.Instance.MainGameMediator.RealTimePlayerData.ExcitementValue);
+            Debug.Log("懷疑值" + GameManager.Instance.MainGameMediator.RealTimePlayerData.SuspicionValue);
         }
         
         rb.linearVelocityX = moveInput * speed * multiplier;

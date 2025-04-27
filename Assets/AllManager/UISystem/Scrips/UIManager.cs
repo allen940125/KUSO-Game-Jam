@@ -110,7 +110,7 @@ namespace Game.UI
 
         private void OnOpenBackPackPressed()
         {
-            OpenPanel<BagMenu>(UIType.BagMenu).Forget();
+            //OpenPanel<BagMenu>(UIType.BagMenu).Forget();
         }
 
         /// <summary>

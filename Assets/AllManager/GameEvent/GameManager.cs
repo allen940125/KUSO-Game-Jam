@@ -67,26 +67,26 @@ public class GameManager : Singleton<GameManager>
         // 若 UIManager 為 null 可做防呆檢查
         UIManager?.Update();
         
-        if (UnityEngine.Input.GetKeyDown(KeyCode.H))
-        {
+        // if (UnityEngine.Input.GetKeyDown(KeyCode.H))
+        // {
             //TeleportManager.Instance.TeleportWithFade(2);
             // UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
             //UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).ExitStory(1,4);
             // UIManager.OpenPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow);
             
             //UIManager.GetPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow).StartStory("444444");
-        }
-        if (UnityEngine.Input.GetKeyDown(KeyCode.T))
-        {
-            StartCoroutine(UIManager.GetPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow).EndStories());
-        }
-        if (UnityEngine.Input.GetKeyDown(KeyCode.Y))
-        {
-            UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
-            UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).Yarimasune();
-            UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory(1,0.1f);
-        }
-        else if(UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+        //}
+        // if (UnityEngine.Input.GetKeyDown(KeyCode.T))
+        // {
+        //     StartCoroutine(UIManager.GetPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow).EndStories());
+        // }
+        // if (UnityEngine.Input.GetKeyDown(KeyCode.Y))
+        // {
+        //     UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
+        //     UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).Yarimasune();
+        //     UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory(1,0.1f);
+        // }
+        if(UnityEngine.Input.GetKeyDown(KeyCode.Escape))
         {
             UIManager.OpenPanel<SettingsWindow>(UIType.SettingsWindow);
         }

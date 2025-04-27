@@ -308,6 +308,158 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: csvFile
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[0].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[0].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[0].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[0].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[0].storyID
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[1].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[1].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[1].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[1].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[1].storyID
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[2].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[2].color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[2].color.g
+      value: 0.9039522
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[2].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[2].storyID
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[3].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[3].color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[3].color.g
+      value: 0.90588236
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[3].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[3].storyID
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[4].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[4].color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[4].color.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[4].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[4].storyID
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[5].color.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[5].color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[5].color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[5].color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[5].storyID
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[0].storyText
+      value: "\u3010\u65C1\u767D\u3011\uFF1A \u4F60\u662F\u4E00\u500B\u767D\u9818\u968E\u5C64\uFF0C\u6700\u8FD1\u88AB\u516C\u53F8\u7D66\u8FAD\u9000\u4E86 "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[1].storyText
+      value: "\u3010\u4E3B\u89D2\u5167\u5FC3\u65C1\u767D\u3011\uFF1A"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[2].storyText
+      value: "\u300C\u6211\u5DF2\u7D93\u4E0D\u8A18\u5F97\uFF0C\u4E0A\u4E00\u6B21\u597D\u597D\u7761\u89BA\u662F\u4EC0\u9EBC\u6642\u5019\u4E86\u3002\u4E09\u5929\u6C92\u5403\u6771\u897F\uFF0C\u4E94\u5929\u6C92\u96E2\u958B\u623F\u9593\u3002\u53EA\u6709\u624B\u6A5F\u9084\u767C\u8457\u5149\uFF0C\u63D0\u9192\u6211\uFF1A\u4F60\u9084\u9192\u8457\u3002\u300D "
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[3].storyText
+      value: "\u300C\u4ED6\u5011\u8AAA\u6211\u662F\u300E\u592A\u654F\u611F\u300F\u3001\u8AAA\u6211\u300E\u4E0D\u5920\u52AA\u529B\u300F\u2026\u2026\u6211\u8A66\u4E86\u554A\uFF0C\u6211\u5DF2\u7D93\u52AA\u529B\u7684\u8A66\u4E86\u3002\u53EA\u662F\u6C92\u6709\u4EBA\u770B\u5230\u2026\u300D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[4].storyText
+      value: "\u300C\u5982\u679C\u6709\u500B\u5730\u65B9\uFF0C\u80FD\u8B93\u6211\u4E0D\u5FC5\u518D\u6490\u2026\u2026\u90A3\u4E5F\u8A31\u503C\u5F97\u8A66\u4E00\u6B21\u3002\u300D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6930507889557526301, guid: 89cef4625244a8840acf009336947188, type: 3}
+      propertyPath: stories.Array.data[5].storyText
+      value: Hello
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

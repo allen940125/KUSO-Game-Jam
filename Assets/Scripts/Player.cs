@@ -17,8 +17,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        moveInput = Input.GetAxis("Horizontal"); 
-        rb.linearVelocityX = moveInput * speed * multiplier;
+        if(GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove == true)
+        {
+            moveInput = Input.GetAxis("Horizontal"); 
+            rb.linearVelocityX = moveInput * speed * multiplier;
+        }
     }
 
     void FixedUpdate()

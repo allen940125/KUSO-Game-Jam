@@ -72,7 +72,7 @@ public class GameManager : Singleton<GameManager>
         {
             TeleportManager.Instance.TeleportWithFade(2);
             // UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
-            // UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory(1,4);
+            //UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).ExitStory(1,4);
             // UIManager.OpenPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow);
             
             //UIManager.GetPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow).StartStory("444444");

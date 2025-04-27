@@ -133,6 +133,7 @@ namespace Game.UI
 
         public IEnumerator EndStories()
         {
+            GameManager.Instance.UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
             GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory(1, 4);
             yield return new WaitForSeconds(0.35f);
             List<StoryData> stories = DialogueManager.Instance.stories;

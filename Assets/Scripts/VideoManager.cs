@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.Video;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEngine.SceneManagement;
 
 public class VideoManager : MonoBehaviour
 {
@@ -66,6 +67,8 @@ public class VideoManager : MonoBehaviour
         yield return new WaitForSeconds((float)clip.length);
 
         videoPlayer.targetCameraAlpha = 0f; // 播完自動隱藏
+        
+        SceneManager.LoadScene("MainMenu");
     }   
 
     private IEnumerator PlayWithFlicker(VideoClip clip)
@@ -90,6 +93,7 @@ public class VideoManager : MonoBehaviour
         yield return new WaitForSeconds((float)clip.length - flickerTime);
 
         videoPlayer.targetCameraAlpha = 0f; // 隱藏
-
+        
+        SceneManager.LoadScene("MainMenu");
     }
 }

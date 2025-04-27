@@ -5,8 +5,9 @@ namespace Game.UI
 {
     public class FadeInOutWindow : BasePanel
     {
-        [SerializeField] GameObject backGroundImage;
-
+        [SerializeField] Sprite YajuuSenpai;
+        [SerializeField] Image nowImage;
+ 
         [SerializeField] Color backGroundColor;
         [SerializeField] float changespeed = 4f;
 
@@ -46,13 +47,13 @@ namespace Game.UI
                 {
                     
                     backGroundColor.a += changespeed * Time.deltaTime;
-                    backGroundImage.GetComponent<Image>().color = backGroundColor;   
+                    nowImage.color = backGroundColor;   
                     //Debug.Log(backGroundColor.a);
                 }
                 else
                 {
                     backGroundColor.a = maxAlpha;
-                    backGroundImage.GetComponent<Image>().color = backGroundColor; 
+                    nowImage.color = backGroundColor; 
                     isEntering = false;
                 }
             }
@@ -61,12 +62,12 @@ namespace Game.UI
                 if(backGroundColor.a >= minAlpha)
                 {
                     backGroundColor.a -= changespeed * Time.deltaTime;
-                    backGroundImage.GetComponent<Image>().color = backGroundColor;   
+                    nowImage.color = backGroundColor;   
                 }
                 else
                 {
                     backGroundColor.a = minAlpha;
-                    backGroundImage.GetComponent<Image>().color = backGroundColor; 
+                    nowImage.color = backGroundColor; 
                     isExiting = false;
                 }
             }
@@ -110,6 +111,18 @@ namespace Game.UI
         public void SetColor(Color color)
         {
             backGroundColor = color;
+        }
+
+        public void Yarimasune()
+        {
+            nowImage.color = backGroundColor = new Color(Color.white.r, Color.white.g, Color.white.b, 0f);
+            nowImage.sprite = YajuuSenpai;
+        }
+
+        public void NoYarimasune()
+        {
+            nowImage.color = backGroundColor = new Color(Color.black.r, Color.black.g, Color.black.b, 0f);
+            nowImage.sprite = null;
         }
     }
 }

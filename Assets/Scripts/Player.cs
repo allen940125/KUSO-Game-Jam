@@ -18,6 +18,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        Cursor.SetCursor(null, Vector2.zero, CursorMode.Auto);
          rb = GetComponent<Rigidbody2D>();
          animator = GetComponentInChildren<Animator>();
     }

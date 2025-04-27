@@ -47,7 +47,7 @@ namespace Game.UI
                     
                     backGroundColor.a += changespeed * Time.deltaTime;
                     backGroundImage.GetComponent<Image>().color = backGroundColor;   
-                    Debug.Log(backGroundColor.a);
+                    //Debug.Log(backGroundColor.a);
                 }
                 else
                 {

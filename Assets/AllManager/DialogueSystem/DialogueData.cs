@@ -14,15 +14,16 @@ public enum DialogueLineType
 /// <summary>
 /// 對話行數據類別
 /// </summary>
-[Serializable]
+[System.Serializable]
 public class DialogueLine
 {
-    public int Id;                      // 唯一識別ID
-    public DialogueLineType LineType;   // 行類型
-    public string CharacterName;        // 角色名稱（僅對話行使用）
-    public string Position;             // 角色位置（僅對話行使用）
-    public string Text;                 // 顯示文本（對話內容/選項文字）
-    public int NextLineId;              // 下一行ID（用於跳轉）
-    public string Effect;               // 選項效果（僅選項行使用）
-    public string Condition;            // 條件 (僅選項行使用)
+    public int Id;
+    public DialogueLineType LineType;
+    public string CharacterName;
+    public string Position;
+    public string Text;
+    public int NextLineId;
+    public string Effect;
+    public string Condition;
+    public string Background; // <<< 👈 新增這行
 }

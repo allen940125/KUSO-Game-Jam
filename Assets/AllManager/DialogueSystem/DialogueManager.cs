@@ -90,6 +90,17 @@ public class DialogueManager : Singleton<DialogueManager>
     {
         var line = _linesById[_currentLineId];
     
+        // 修改這裡：只有當背景不為空且非空字串時才換背景
+        if (!string.IsNullOrWhiteSpace(line.Background))
+        {
+            ChangeBackground(line.Background.Trim());
+        }
+        else
+        {
+            // 明確傳入 null 來關閉背景
+            GameManager.Instance.UIManager.GetPanel<DialogueWindow>(UIType.DialogueWindow)?.SetBackground(null);
+        }
+        
         // 對話類型需先檢查條件
         if (line.LineType == DialogueLineType.Dialogue)
         {
@@ -123,6 +134,29 @@ public class DialogueManager : Singleton<DialogueManager>
                 break;
         }
     }
+    
+    
+    private void ChangeBackground(string backgroundName)
+    {
+        // 再次防禦性檢查
+        if (string.IsNullOrWhiteSpace(backgroundName))
+        {
+            GameManager.Instance.UIManager.GetPanel<DialogueWindow>(UIType.DialogueWindow)?.SetBackground(null);
+            return;
+        }
+
+        backgroundName = backgroundName.Trim();
+        var sprite = Resources.Load<Sprite>($"Backgrounds/{backgroundName}");
+    
+        if (sprite == null)
+        {
+            Debug.LogError($"找不到背景圖片: {backgroundName}，請確認Resources/Backgrounds資料夾內有對應的Sprite");
+            return;
+        }
+
+        GameManager.Instance.UIManager.GetPanel<DialogueWindow>(UIType.DialogueWindow)?.SetBackground(sprite);
+    }
+
 
 
     #region DialogueUI
@@ -179,6 +213,7 @@ public class DialogueManager : Singleton<DialogueManager>
                         NextLineId = int.TryParse(cells[5], out var nxt) ? nxt : -1,
                         Effect = cells[6],
                         Condition = cells[7],
+                        Background = cells.Length > 10 ? cells[10] : "", // <<< 注意是 index 10 !!
                     };
                     _linesById[id] = line;
                     lastDialogueId = id;
@@ -193,6 +228,7 @@ public class DialogueManager : Singleton<DialogueManager>
                         NextLineId = int.TryParse(cells[5], out var optNxt) ? optNxt : -1,
                         Effect = cells[6],
                         Condition = cells[7],
+                        Background = cells.Length > 10 ? cells[10] : "", // <<< 注意是 index 10 !!
                     };
                     _linesById[optId] = opt;
                     if (!_optionsByParent.ContainsKey(lastDialogueId))

@@ -270,8 +270,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de438728a08ac4ecca8056e9d05e7a35, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isSetInputActive: 0
+  isSetInputActive: 1
   audio_NormalBtn:
     audioClip: {fileID: 0}
   storyText: {fileID: 535467459694841170}
   typeSpeed: 0.001
+  waitSecondsAfterStory: 3

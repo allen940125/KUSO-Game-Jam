@@ -13,7 +13,7 @@ public class DialogueWindow : BasePanel
     [SerializeField] Transform optionBtnContainer;
     
     [SerializeField] Image meshImage;
-    
+    [SerializeField] Image backgroundImage;
     private void OnEnable()
     {
         var dm = DialogueManager.Instance;
@@ -100,4 +100,19 @@ public class DialogueWindow : BasePanel
         ClosePanel();
         
     }
+    
+    public void SetBackground(Sprite sprite)
+    {
+        Debug.Log(sprite);
+        if (sprite == null)
+        {
+            backgroundImage.gameObject.SetActive(false); // 關閉背景
+        }
+        else
+        {
+            backgroundImage.gameObject.SetActive(true);  // 開啟背景
+            backgroundImage.sprite = sprite;
+        }
+    }
+
 }

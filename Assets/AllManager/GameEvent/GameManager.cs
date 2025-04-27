@@ -66,7 +66,17 @@ public class GameManager : Singleton<GameManager>
         
         if (UnityEngine.Input.GetKeyDown(KeyCode.G))
         {
-            //UIManager.OpenPanel<FadeInOutPanel>(UIType.FadeInOutPanel);
+            UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
+            UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory(1,4);
+        }
+        if (UnityEngine.Input.GetKeyDown(KeyCode.H))
+        {
+            UIManager.OpenPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow);
+            //UIManager.GetPanel<StoryTextDisplayWindow>(UIType.StoryTextDisplayWindow).StartStory("444444");
+        }
+        else if(UnityEngine.Input.GetKeyDown(KeyCode.Escape))
+        {
+            UIManager.OpenPanel<SettingsWindow>(UIType.SettingsWindow);
         }
     }
     public void SetPlayer(GameObject newPlayer)

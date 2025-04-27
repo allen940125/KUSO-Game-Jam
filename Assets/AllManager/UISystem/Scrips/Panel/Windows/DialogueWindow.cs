@@ -35,6 +35,20 @@ public class DialogueWindow : BasePanel
     private void HandleLine(DialogueLine line)
     {
         characterNameText.text = line.CharacterName;
+
+        if (characterNameText.text == "旁白")
+        {
+            dialogueBodyText.color = Color.yellow;
+        }
+        else if(characterNameText.text == "心靈教育員")
+        {
+            dialogueBodyText.color = Color.red;
+        }
+        else
+        {
+            dialogueBodyText.color = Color.white;
+        }
+        
         dialogueBodyText.text = line.Text;
         meshImage.gameObject.SetActive(false);
         

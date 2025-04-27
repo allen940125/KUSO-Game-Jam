@@ -70,8 +70,6 @@ namespace Datamanager
     {
         [field: SerializeField] public string Name { get; set; }
         [field: SerializeField] public string Path { get; set; }
-
-        private UIType[] o;
     }
 }
 
@@ -90,11 +88,11 @@ public enum UIType
     
     SceneLoadingTransitionPanel = 210,
     GameStartTransitionPanel = 220,
-
-    FadeInOutPanel = 230,
     
     SettingsWindow = 310,   //設定介面
     DialogueWindow = 320,
+    FadeInOutWindow = 330,
+    StoryTextDisplayWindow = 340,
     
     GameHUD = 410,
 }

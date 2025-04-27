@@ -21,6 +21,9 @@ public class DialogueManager : Singleton<DialogueManager>
 
     [SerializeField] private TextAsset _csvFile;             // 對話數據的CSV文件
 
+    [Header("故事旁白資料")]
+    public List<StoryData> stories;
+    
     protected override void Awake()
     {
         base.Awake();
@@ -223,6 +226,7 @@ public class DialogueManager : Singleton<DialogueManager>
     public void LoadDialogueCsv(TextAsset csv)
     {
         ParseCsv(csv);
+        Debug.Log(_linesById.Keys.Min());
         _currentLineId = _linesById.Keys.Min();
         //Debug.Log($"初始載入ID:{_currentLineId}"); // 應為0
         DispatchCurrent(); // 確保此處觸發OnLineChanged

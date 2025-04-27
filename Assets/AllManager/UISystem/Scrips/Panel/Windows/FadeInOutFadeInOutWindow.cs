@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Game.UI
 {
-    public class FadeInOutPanel : BasePanel
+    public class FadeInOutWindow : BasePanel
     {
         [SerializeField] GameObject backGroundImage;
 
@@ -23,9 +23,6 @@ namespace Game.UI
 
         protected override void Start()
         {
-            backGroundColor = backGroundImage.GetComponent<Image>().color;
-            backGroundColor.a = 1f;
-            backGroundImage.GetComponent<Image>().color = backGroundColor;
             base.Start();
         }  
 

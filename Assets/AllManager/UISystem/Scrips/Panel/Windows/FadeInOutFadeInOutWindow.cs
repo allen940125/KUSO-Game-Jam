@@ -117,13 +117,14 @@ namespace Game.UI
         {
             nowImage.color = backGroundColor = new Color(Color.white.r, Color.white.g, Color.white.b, 0f);
             nowImage.sprite = YajuuSenpai;
-            //野獸前輩
+            //圖片轉成野獸前輩
         }
 
         public void NoYarimasune()
         {
             nowImage.color = backGroundColor = new Color(Color.black.r, Color.black.g, Color.black.b, 0f);
             nowImage.sprite = null;
+            //野獸前輩圖片把它轉成Null
         }
     }
 }

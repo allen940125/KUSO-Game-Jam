@@ -46,7 +46,6 @@ namespace Game.UI
             {
                 if(backGroundColor.a <= maxAlpha)
                 {
-                    
                     backGroundColor.a += changespeed * Time.deltaTime;
                     nowImage.color = backGroundColor;   
                     //Debug.Log(backGroundColor.a);

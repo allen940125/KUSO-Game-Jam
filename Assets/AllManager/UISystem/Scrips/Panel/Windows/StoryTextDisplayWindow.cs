@@ -126,7 +126,7 @@ namespace Game.UI
             }
             storyText.text = "";
             storyText2.text = "";
-            GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).ExitStory(0, 4);
+            GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).FadeOut(0, 4);
             GameManager.Instance.MainGameMediator.RealTimePlayerData.CanPlayerMove = true;
             GameManager.Instance.MainGameMediator.RealTimePlayerData.IsListeningYajuuSenpai = false;
             Debug.Log("故事結束，淡出後玩家可以移動");
@@ -135,7 +135,7 @@ namespace Game.UI
         public IEnumerator EndStories()
         {
             GameManager.Instance.UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
-            GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).EnterStory(1, 4);
+            GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow).FadeIn(1, 4);
             yield return new WaitForSeconds(0.35f);
             List<StoryData> stories = DialogueManager.Instance.stories;
             Debug.Log(stories.Count);

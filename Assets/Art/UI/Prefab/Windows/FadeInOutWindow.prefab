@@ -118,8 +118,7 @@ MonoBehaviour:
   isSetInputActive: 1
   audio_NormalBtn:
     audioClip: {fileID: 0}
-  backGroundImage: {fileID: 6795766421515727547}
-  YajuuSenpai: {fileID: 8957324059118975939, guid: 7efc54e67d226499fa64658a6c8cc10f, type: 3}
+  newSprite: {fileID: 8957324059118975939, guid: 7efc54e67d226499fa64658a6c8cc10f, type: 3}
   nowImage: {fileID: 1930863914461325265}
   backGroundColor: {r: 0, g: 0, b: 0, a: 0}
   changespeed: 4

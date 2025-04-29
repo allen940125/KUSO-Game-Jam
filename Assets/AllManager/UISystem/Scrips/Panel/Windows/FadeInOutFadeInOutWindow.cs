@@ -5,17 +5,17 @@ namespace Game.UI
 {
     public class FadeInOutWindow : BasePanel
     {
-        [SerializeField] Sprite YajuuSenpai;
-        [SerializeField] Image nowImage;
+        [SerializeField] Sprite newSprite; //要更改的圖片
+        [SerializeField] Image nowImage; //現在的圖片
  
-        [SerializeField] Color backGroundColor;
-        [SerializeField] float changespeed = 4f;
+        [SerializeField] Color backGroundColor; //顏色
+        [SerializeField] float changespeed = 4f; //變化速度
 
-        [SerializeField] float maxAlpha = 1f;
-        [SerializeField] float minAlpha = 0f;
+        [SerializeField] float maxAlpha = 1f; //最大透明度
+        [SerializeField] float minAlpha = 0f; //最小透明度
 
-        [SerializeField] bool isEntering = false;
-        [SerializeField] bool isExiting = false;
+        [SerializeField] bool isFadeIn = false; //是否淡入
+        [SerializeField] bool isFadeOut = false; //是否淡出
 
         protected override void Awake()
         {
@@ -41,7 +41,8 @@ namespace Game.UI
     
         private void Update()
         {
-            if(isEntering)
+            //如果isFadeIn為true就要淡入
+            if(isFadeIn)
             {
                 if(backGroundColor.a <= maxAlpha)
                 {
@@ -54,10 +55,10 @@ namespace Game.UI
                 {
                     backGroundColor.a = maxAlpha;
                     nowImage.color = backGroundColor; 
-                    isEntering = false;
+                    isFadeIn = false;
                 }
             }
-            else if(isExiting)
+            else if(isFadeOut) //如果isFadeOut為true就要淡出
             {
                 if(backGroundColor.a >= minAlpha)
                 {
@@ -68,63 +69,86 @@ namespace Game.UI
                 {
                     backGroundColor.a = minAlpha;
                     nowImage.color = backGroundColor; 
-                    isExiting = false;
+                    isFadeOut = false;
                 }
             }
         }
-        public void EnterStory(float maxalpha, float speed)
+
+        //淡入，可以更改透明度以及速度
+        public void FadeIn(float maxalpha, float speed)
         {
             maxAlpha = maxalpha;
             changespeed = speed;
-            isEntering = true;
+            isFadeIn = true;
         }
 
-        public void EnterStory(float speed)
+        //淡入，可以更改速度
+        public void FadeIn(float speed)
         {
             changespeed = speed;
-            isEntering = true;
+            isFadeIn = true;
         }
 
-        public void EnterStory()
+        //淡入
+        public void FadeIn()
         {
-            isEntering = true;
+            isFadeIn = true;
         }
 
-        public void ExitStory(float minalpha, float speed)
+        //淡出，可以更改透明度以及速度
+        public void FadeOut(float minalpha, float speed)
         {
             minAlpha = minalpha;
             changespeed = speed;
-            isExiting = true;
+            isFadeOut = true;
         }   
 
-        public void ExitStory(float speed)
+        //淡出，可以更改速度
+        public void FadeOut(float speed)
         {
             changespeed = speed;
-            isExiting = true;
+            isFadeOut = true;
         }
 
-        public void ExitStory()
+        //淡出
+        public void FadeOut()
         {
-            isExiting = true;
+            isFadeOut = true;
         }
 
+        //更改顏色
         public void SetColor(Color color)
         {
             backGroundColor = color;
         }
 
-        public void Yarimasune()
+        //更改圖片
+        public void ChangeImage()
         {
             nowImage.color = backGroundColor = new Color(Color.white.r, Color.white.g, Color.white.b, 0f);
-            nowImage.sprite = YajuuSenpai;
-            //圖片轉成野獸前輩
+            nowImage.sprite = newSprite;
         }
 
-        public void NoYarimasune()
+        //更改圖片，可以在其他地方放圖片
+        public void ChangeImage(Sprite sprite)
+        {
+            nowImage.color = backGroundColor = new Color(Color.white.r, Color.white.g, Color.white.b, 0f);
+            nowImage.sprite = sprite;
+        }
+
+        //更改圖片，可以在其他地方放圖片以及透明度
+        public void ChangeImage(Sprite sprite, float alpha)
+        {
+            nowImage.color = backGroundColor = new Color(Color.white.r, Color.white.g, Color.white.b, alpha);
+            nowImage.sprite = sprite;
+        }
+
+
+        //更改圖片成Null
+        public void ChangeImageToNull()
         {
             nowImage.color = backGroundColor = new Color(Color.black.r, Color.black.g, Color.black.b, 0f);
             nowImage.sprite = null;
-            //野獸前輩圖片把它轉成Null
         }
     }
 }

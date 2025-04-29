@@ -28,7 +28,7 @@ public class TeleportManager : Singleton<TeleportManager>
         // 開啟淡入淡出畫面
         GameManager.Instance.UIManager.OpenPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
         var fadeWindow = GameManager.Instance.UIManager.GetPanel<FadeInOutWindow>(UIType.FadeInOutWindow);
-        fadeWindow.EnterStory(1, 4);
+        fadeWindow.FadeIn(1, 4);
 
         // 等淡入時間
         yield return new WaitForSeconds(1f);
@@ -46,7 +46,7 @@ public class TeleportManager : Singleton<TeleportManager>
             Debug.LogWarning($"找不到ID為 {id} 的傳送資料！");
         }
 
-        fadeWindow.ExitStory(0, 4);
+        fadeWindow.FadeOut(0, 4);
 
         // 可以選擇這時候馬上淡出，也可以交給FadeInOutWindow自己處理
         // 這裡先不手動 ExitStory，因為 EnterStory(1,4)裡應該自己管理淡出動畫
